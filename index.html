@@ -28,6 +28,9 @@
   .nav{display:flex;align-items:center;justify-content:space-between;height:62px}
   .brand{font-family:Sora;font-weight:800;font-size:21px;letter-spacing:-.01em}
   .brand b{background:linear-gradient(90deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .navlinks{display:flex;gap:18px;align-items:center}
+  .navlinks a{font-size:14px;color:var(--muted)}
+  .navlinks a:hover{color:var(--ink)}
   .eyebrow{font:700 12px Sora;letter-spacing:.18em;text-transform:uppercase;color:var(--brand2)}
   .hero{text-align:center;padding:64px 0 34px}
   .hero h1{font-size:clamp(32px,5vw,52px);font-weight:800;letter-spacing:-.02em}
@@ -40,6 +43,11 @@
   section{padding:30px 0}
   .head{text-align:center;margin-bottom:26px}
   .head h2{font-size:clamp(24px,3.4vw,34px);margin-top:6px}
+  .head p{color:var(--muted);font-size:15px;max-width:56ch;margin:8px auto 0}
+  /* band = section header left-aligned */
+  .band{display:flex;align-items:baseline;gap:12px;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:20px;flex-wrap:wrap}
+  .band h2{font-size:clamp(20px,2.8vw,26px)}
+  .band .sub{color:var(--muted);font-size:14px;margin-left:auto}
   /* bundle */
   .bundle{background:linear-gradient(120deg,#1b1740,#10202b);border:1px solid #3a2f6b;border-radius:22px;padding:30px;display:grid;grid-template-columns:1.4fr 1fr;gap:24px;align-items:center}
   .bundle .tagb{display:inline-block;background:var(--gold);color:#1a1206;font:700 11px Sora;padding:4px 10px;border-radius:6px;letter-spacing:.04em}
@@ -52,7 +60,7 @@
   .bundle .imgs img:first-child{margin-left:0}
   /* grid */
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-  .prod{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+  .prod{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;position:relative}
   .prod .thumb{aspect-ratio:1/1.1;overflow:hidden;background:#0E1016;border-bottom:1px solid var(--line)}
   .prod .thumb img{width:100%;height:100%;object-fit:cover;object-position:center}
   .prod .body{padding:18px;display:flex;flex-direction:column;gap:8px;flex:1}
@@ -62,6 +70,40 @@
   .prod .pr{font-family:Sora;font-weight:700;font-size:18px}
   .prod .pr small{color:var(--muted);font-weight:500;font-size:12px}
   .prod .btn{padding:10px 16px;font-size:14px}
+  .bud{position:absolute;top:12px;left:12px;background:rgba(11,14,22,.82);backdrop-filter:blur(6px);border:1px solid var(--line);color:var(--ink);font:700 11px Sora;padding:4px 9px;border-radius:7px}
+  /* featured product (prompts) */
+  .feat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:0;display:grid;grid-template-columns:300px 1fr;overflow:hidden}
+  .feat .ph{background:#0E1016;border-right:1px solid var(--line)}
+  .feat .ph img{width:100%;height:100%;object-fit:cover;display:block}
+  .feat .bd{padding:26px}
+  .feat h3{font-size:23px;margin-bottom:8px}
+  .feat .lead{color:var(--muted);font-size:14.5px;margin-bottom:14px}
+  .feat .cats{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}
+  .feat .cats span{font-size:12px;color:var(--ink);background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:5px 11px}
+  .feat .row{display:flex;align-items:center;gap:16px}
+  .feat .pr{font-family:Sora;font-weight:800;font-size:24px}
+  /* decision guide */
+  .guide{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .gcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:6px}
+  .gcard .q{font:700 15px Sora;color:var(--ink)}
+  .gcard .a{color:var(--muted);font-size:13.5px}
+  .gcard a{color:var(--brand2);font-weight:600;font-size:13.5px;margin-top:auto}
+  /* trust grid */
+  .trustgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .tcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;text-align:center}
+  .tcard .ic{font-size:24px}
+  .tcard b{display:block;font-family:Sora;font-size:14.5px;margin:8px 0 4px}
+  .tcard span{color:var(--muted);font-size:12.5px}
+  /* reviews */
+  .revs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .rev{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+  .rev .stars{color:var(--gold);font-size:14px;letter-spacing:2px}
+  .rev p{color:var(--ink);font-size:13.5px;margin:8px 0}
+  .rev .who{color:var(--muted);font-size:12px}
+  .badge-exp{display:flex;align-items:center;gap:14px;background:linear-gradient(120deg,#10202b,#141927);border:1px solid var(--line);border-radius:16px;padding:20px 24px;margin-bottom:18px}
+  .badge-exp .seal{font-size:34px}
+  .badge-exp b{font-family:Sora}
+  .badge-exp span{color:var(--muted);font-size:13.5px}
   /* free */
   .free{background:var(--bg2);border:1px solid var(--line);border-radius:20px;padding:30px;text-align:center}
   .free h3{font-size:24px}
@@ -75,14 +117,20 @@
   details[open] summary::after{content:"–"}
   details p{padding:0 0 16px;color:var(--muted);font-size:14px}
   footer{border-top:1px solid var(--line);margin-top:30px;padding:28px 0;color:var(--muted);font-size:13px;text-align:center}
-  @media(max-width:820px){.grid{grid-template-columns:1fr}.bundle{grid-template-columns:1fr}}
+  @media(max-width:820px){.grid{grid-template-columns:1fr 1fr}.bundle{grid-template-columns:1fr}.feat{grid-template-columns:1fr}.feat .ph{height:200px;border-right:none;border-bottom:1px solid var(--line)}.guide{grid-template-columns:1fr}.trustgrid{grid-template-columns:1fr}.revs{grid-template-columns:1fr}.navlinks a:not(.btn){display:none}}
+  @media(max-width:520px){.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <header>
   <div class="wrap nav">
     <div class="brand">BO<b>OST</b></div>
-    <a href="#produits" class="btn ghost" style="padding:9px 16px;font-size:14px">Voir les produits</a>
+    <nav class="navlinks">
+      <a href="#packs">Packs business</a>
+      <a href="#prompts">Prompts IA</a>
+      <a href="#choisir">Quel produit ?</a>
+      <a href="#packs" class="btn ghost" style="padding:9px 16px;font-size:14px">Voir les produits</a>
+    </nav>
   </div>
 </header>
 
@@ -117,63 +165,170 @@
     </div>
   </section>
 
-  <!-- PRODUITS -->
-  <section id="produits">
-    <div class="head"><span class="eyebrow">À l'unité</span><h2>Les produits</h2></div>
+  <!-- PACKS BUSINESS PAR BUDGET -->
+  <section id="packs">
+    <div class="band">
+      <span class="eyebrow">À l'unité</span>
+      <h2>📚 Packs business — par budget</h2>
+      <span class="sub">5 tomes · 250 business · chacun avec ses étapes</span>
+    </div>
     <div class="grid">
       <div class="prod">
-        <div class="thumb"><img src="img/prompts-ecom.png" alt="PROMPTS PRO E-commerce"></div>
-        <div class="body">
-          <h3>PROMPTS PRO · E-commerce</h3>
-          <p>501 prompts ChatGPT prêts à coller, classés en 12 étapes du métier e-commerce. 0 doublon.</p>
-          <div class="row"><span class="pr">24 CHF <small>/ 24 €</small></span><a href="#" class="btn buy" data-p="prompts">Acheter</a></div>
-        </div>
-      </div>
-      <div class="prod">
+        <span class="bud">Budget : 0 €</span>
         <div class="thumb"><img src="img/tome1.png" alt="Tome 1"></div>
         <div class="body">
-          <h3>50 business · sans investir</h3>
-          <p>Tome 1 : 50 business à lancer dès demain avec 0€, chacun avec ses étapes concrètes.</p>
+          <h3>Tome 1 · Sans investir</h3>
+          <p>50 business à lancer dès demain avec 0€, chacun avec ses étapes concrètes.</p>
           <div class="row"><span class="pr">19,90 CHF <small>/ €</small></span><a href="#" class="btn buy" data-p="tome1">Acheter</a></div>
         </div>
       </div>
       <div class="prod">
+        <span class="bud">~ 300 €/mois</span>
         <div class="thumb"><img src="img/tome2.png" alt="Tome 2"></div>
         <div class="body">
-          <h3>50 business · ~300€/mois</h3>
-          <p>Tome 2 : 50 business avec un petit budget, étapes + répartition du budget pub/outils.</p>
+          <h3>Tome 2 · Petit budget</h3>
+          <p>50 business avec ~300€/mois : étapes + répartition du budget pub/outils.</p>
           <div class="row"><span class="pr">19,90 CHF <small>/ €</small></span><a href="#" class="btn buy" data-p="tome2">Acheter</a></div>
         </div>
       </div>
       <div class="prod">
+        <span class="bud">&lt; 1000 €/mois</span>
         <div class="thumb"><img src="img/tome3.png" alt="Tome 3"></div>
         <div class="body">
-          <h3>50 business · &lt; 1000€/mois</h3>
-          <p>Tome 3 : 50 business avec stock, pubs à l'échelle et sous-traitance. Étapes + budget.</p>
+          <h3>Tome 3 · Passer à l'échelle</h3>
+          <p>50 business avec stock, pubs à l'échelle et sous-traitance. Étapes + budget.</p>
           <div class="row"><span class="pr">19,90 CHF <small>/ €</small></span><a href="#" class="btn buy" data-p="tome3">Acheter</a></div>
         </div>
       </div>
       <div class="prod">
+        <span class="bud">1000-5000 €/mois</span>
         <div class="thumb"><img src="img/tome4.png" alt="Tome 4"></div>
         <div class="body">
-          <h3>50 business · 1000-5000€/mois</h3>
-          <p>Tome 4 : vraie marque, stock sérieux et première équipe. Étapes + budget.</p>
+          <h3>Tome 4 · Vraie marque</h3>
+          <p>50 business : vraie marque, stock sérieux et première équipe. Étapes + budget.</p>
           <div class="row"><span class="pr">19,90 CHF <small>/ €</small></span><a href="#" class="btn buy" data-p="tome4">Acheter</a></div>
         </div>
       </div>
       <div class="prod">
+        <span class="bud">+ 5000 €/mois</span>
         <div class="thumb"><img src="img/tome5.png" alt="Tome 5"></div>
         <div class="body">
-          <h3>50 business · +5000€/mois</h3>
-          <p>Tome 5 : capital, immobilier, sociétés et acquisitions. Étapes + structure.</p>
+          <h3>Tome 5 · Investisseur</h3>
+          <p>50 business : capital, immobilier, sociétés et acquisitions. Étapes + structure.</p>
           <div class="row"><span class="pr">19,90 CHF <small>/ €</small></span><a href="#" class="btn buy" data-p="tome5">Acheter</a></div>
+        </div>
+      </div>
+      <div class="prod" style="border-style:dashed;justify-content:center;align-items:center;text-align:center">
+        <div class="body" style="justify-content:center">
+          <div style="font-size:26px">🎁</div>
+          <h3>Les 5 d'un coup ?</h3>
+          <p>Prends la Collection complète (250 business) et économise 40 €.</p>
+          <a href="#" class="btn buy" data-p="collection" style="margin-top:6px">Voir la collection</a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- PROMPTS IA -->
+  <section id="prompts">
+    <div class="band">
+      <span class="eyebrow">Booster IA</span>
+      <h2>🤖 Prompts IA — vendre plus, plus vite</h2>
+      <span class="sub">Prêts à coller dans ChatGPT, Claude, Gemini…</span>
+    </div>
+    <div class="feat">
+      <div class="ph"><img src="img/prompts-ecom.png" alt="PROMPTS PRO E-commerce"></div>
+      <div class="bd">
+        <h3>PROMPTS PRO · E-commerce</h3>
+        <p class="lead">501 prompts prêts à coller, classés en 12 étapes du métier e-commerce. 0 doublon. Remplace les [variables] et lance ton IA.</p>
+        <div class="cats">
+          <span>🛍️ Recherche produit</span><span>✍️ Fiches produits</span><span>📣 Publicités</span>
+          <span>🎬 Scripts vidéo</span><span>📧 Email</span><span>🛒 Pages de vente</span>
+          <span>🔍 SEO</span><span>💬 SAV</span><span>📱 Réseaux</span><span>🤝 Fournisseurs</span>
+          <span>📊 Prix & marge</span><span>🚀 Lancement</span>
+        </div>
+        <div class="row">
+          <span class="pr">24 CHF <small style="color:var(--muted);font-weight:500;font-size:13px">/ 24 €</small></span>
+          <a href="#" class="btn buy" data-p="prompts">Acheter le pack</a>
+          <span style="color:var(--muted);font-size:12.5px">⚡ Livré en PDF · accès à vie</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUEL PRODUIT POUR TOI -->
+  <section id="choisir">
+    <div class="head">
+      <span class="eyebrow">Aide au choix</span>
+      <h2>🧭 Quel produit pour toi ?</h2>
+      <p>Quatre situations, quatre réponses claires. Pas besoin de tout acheter — commence par ce qui colle à ta situation.</p>
+    </div>
+    <div class="guide">
+      <div class="gcard">
+        <div class="q">« Je veux me lancer mais je n'ai pas d'idée. »</div>
+        <div class="a">Commence par le guide gratuit (101 idées), puis le Tome 1 pour passer à l'action avec 0€.</div>
+        <a href="#gratuit">→ Guide gratuit + Tome 1</a>
+      </div>
+      <div class="gcard">
+        <div class="q">« J'ai un petit budget à investir. »</div>
+        <div class="a">Selon ce que tu peux mettre : Tome 2 (~300€), Tome 3 (&lt;1000€) ou Tome 4 (1000-5000€).</div>
+        <a href="#packs">→ Packs par budget</a>
+      </div>
+      <div class="gcard">
+        <div class="q">« J'ai déjà une boutique, je veux vendre plus. »</div>
+        <div class="a">Le pack PROMPTS PRO e-commerce : 501 prompts pour tes pubs, fiches, emails et pages de vente.</div>
+        <a href="#prompts">→ Pack prompts e-commerce</a>
+      </div>
+      <div class="gcard">
+        <div class="q">« Je veux tout, au meilleur prix. »</div>
+        <div class="a">La Collection complète : les 5 tomes (250 business) à 59€ au lieu de 99€.</div>
+        <a href="#" class="buy" data-p="collection">→ Collection complète</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONFIANCE & AVIS -->
+  <section id="confiance">
+    <div class="head">
+      <span class="eyebrow">Confiance</span>
+      <h2>Pourquoi nous faire confiance</h2>
+    </div>
+    <div class="trustgrid">
+      <div class="tcard"><div class="ic">⚡</div><b>Livraison instantanée</b><span>Ton PDF arrive par email juste après le paiement.</span></div>
+      <div class="tcard"><div class="ic">🔒</div><b>Paiement 100% sécurisé</b><span>Encaissement via Payhip/Gumroad (carte, PayPal).</span></div>
+      <div class="tcard"><div class="ic">↩️</div><b>Satisfait ou remboursé</b><span>Ça ne te convient pas ? On te rembourse, sans discuter.</span></div>
+      <div class="tcard"><div class="ic">🇨🇭🇫🇷</div><b>Pensé Suisse &amp; France</b><span>Page « se lancer » FR/CH (statut, TVA) dans chaque guide.</span></div>
+      <div class="tcard"><div class="ic">♻️</div><b>Mises à jour à vie</b><span>Le contenu évolue, tes mises à jour sont incluses.</span></div>
+      <div class="tcard"><div class="ic">📄</div><b>Contenu vérifié</b><span>Relu, structuré, 0 doublon. Du concret, pas du remplissage.</span></div>
+    </div>
+
+    <!-- ============================================================
+         AVIS & VALIDATION EXPERT
+         👉 Quand tu auras de VRAIS avis clients ou la validation
+            d'un expert (avec son accord écrit), enlève le
+            style="display:none" ci-dessous et remplis les blocs.
+            ⚠️ N'invente jamais d'avis ni de nom : ce doit être réel.
+         ============================================================ -->
+    <div id="avis-bloc" style="display:none;margin-top:26px">
+      <!-- Badge expert (à remplir avec un vrai expert qui a donné son accord) -->
+      <div class="badge-exp">
+        <div class="seal">✅</div>
+        <div>
+          <b>Validé par [Nom de l'expert]</b><br>
+          <span>« [Phrase de recommandation de l'expert]. » — [Titre / expertise]</span>
+        </div>
+      </div>
+      <!-- Avis clients réels -->
+      <div class="revs">
+        <div class="rev"><div class="stars">★★★★★</div><p>« [Avis client réel] »</p><div class="who">— [Prénom], [ville]</div></div>
+        <div class="rev"><div class="stars">★★★★★</div><p>« [Avis client réel] »</p><div class="who">— [Prénom], [ville]</div></div>
+        <div class="rev"><div class="stars">★★★★★</div><p>« [Avis client réel] »</p><div class="who">— [Prénom], [ville]</div></div>
+      </div>
+    </div>
+  </section>
+
   <!-- GRATUIT -->
-  <section>
+  <section id="gratuit">
     <div class="free">
       <span class="eyebrow">Gratuit</span>
       <h3>🎁 101 idées de business 2026-2027</h3>
@@ -191,8 +346,9 @@
     <div class="head"><span class="eyebrow">FAQ</span><h2>Questions fréquentes</h2></div>
     <details open><summary>Je reçois quoi et quand ?</summary><p>Un fichier PDF, livré instantanément après le paiement par email. Accès à vie + mises à jour.</p></details>
     <details><summary>Ça marche pour la Suisse et la France ?</summary><p>Oui. Les guides incluent une page « se lancer en Suisse / en France » (statut, TVA), et le paiement se fait en CHF ou en €.</p></details>
+    <details><summary>C'est pour débutant ou confirmé ?</summary><p>Les deux. Les tomes sont classés par budget (0€ à +5000€/mois) : tu choisis ton niveau. Chaque business a ses étapes concrètes.</p></details>
     <details><summary>Et si ça ne me plaît pas ?</summary><p>Satisfait ou remboursé : écris-nous et on te rembourse, sans discuter.</p></details>
-    <details><summary>Quelle IA pour les prompts ?</summary><p>Toutes : ChatGPT, Claude, Gemini, Copilot. Les prompts sont universels, en français.</p></details>
+    <details><summary>Quelle IA pour les prompts ?</summary><p>Toutes : ChatGPT, Claude, Gemini, Copilot. Les prompts sont universels, en français. Le pack inclut une page « comment bien les utiliser ».</p></details>
   </section>
 </div>
 
