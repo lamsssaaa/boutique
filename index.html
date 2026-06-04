@@ -104,15 +104,15 @@
     <div class="bundle">
       <div>
         <span class="tagb">MEILLEURE OFFRE</span>
-        <h3>Le Pack Démarrage complet</h3>
-        <p>Les 3 produits réunis : le pack de 501 prompts e-commerce + les 2 tomes « 50 business à lancer ». Tout pour démarrer et vendre.</p>
-        <div class="pr">39 CHF / 39 € <s>64</s></div>
-        <a href="#" class="btn buy" data-p="bundle" style="margin-top:16px">Obtenir le pack complet →</a>
+        <h3>La Collection complète · 250 business</h3>
+        <p>Les 5 tomes « 50 business à lancer », classés par budget : 0€, ~300€, &lt;1000€, 1000-5000€, +5000€/mois. 250 business avec leurs étapes — un pour chaque budget.</p>
+        <div class="pr">59 CHF / 59 € <s>99</s></div>
+        <a href="#" class="btn buy" data-p="collection" style="margin-top:16px">Obtenir la collection (5 tomes) →</a>
       </div>
       <div class="imgs">
-        <img src="img/prompts-ecom.png" alt="">
         <img src="img/tome1.png" alt="">
-        <img src="img/tome2.png" alt="">
+        <img src="img/tome3.png" alt="">
+        <img src="img/tome5.png" alt="">
       </div>
     </div>
   </section>
@@ -143,6 +143,30 @@
           <h3>50 business · ~300€/mois</h3>
           <p>Tome 2 : 50 business avec un petit budget, étapes + répartition du budget pub/outils.</p>
           <div class="row"><span class="pr">19,90 CHF <small>/ €</small></span><a href="#" class="btn buy" data-p="tome2">Acheter</a></div>
+        </div>
+      </div>
+      <div class="prod">
+        <div class="thumb"><img src="img/tome3.png" alt="Tome 3"></div>
+        <div class="body">
+          <h3>50 business · &lt; 1000€/mois</h3>
+          <p>Tome 3 : 50 business avec stock, pubs à l'échelle et sous-traitance. Étapes + budget.</p>
+          <div class="row"><span class="pr">19,90 CHF <small>/ €</small></span><a href="#" class="btn buy" data-p="tome3">Acheter</a></div>
+        </div>
+      </div>
+      <div class="prod">
+        <div class="thumb"><img src="img/tome4.png" alt="Tome 4"></div>
+        <div class="body">
+          <h3>50 business · 1000-5000€/mois</h3>
+          <p>Tome 4 : vraie marque, stock sérieux et première équipe. Étapes + budget.</p>
+          <div class="row"><span class="pr">19,90 CHF <small>/ €</small></span><a href="#" class="btn buy" data-p="tome4">Acheter</a></div>
+        </div>
+      </div>
+      <div class="prod">
+        <div class="thumb"><img src="img/tome5.png" alt="Tome 5"></div>
+        <div class="body">
+          <h3>50 business · +5000€/mois</h3>
+          <p>Tome 5 : capital, immobilier, sociétés et acquisitions. Étapes + structure.</p>
+          <div class="row"><span class="pr">19,90 CHF <small>/ €</small></span><a href="#" class="btn buy" data-p="tome5">Acheter</a></div>
         </div>
       </div>
     </div>
@@ -182,7 +206,7 @@
 
 <script>
   // ⚠️ Remplace par tes vrais liens Payhip/Gumroad une fois les produits publiés.
-  const LIENS = { prompts:"#", tome1:"#", tome2:"#", bundle:"#" };
+  const LIENS = { prompts:"#", tome1:"#", tome2:"#", tome3:"#", tome4:"#", tome5:"#", collection:"#" };
   document.querySelectorAll('.buy').forEach(b=>{
     const k=b.getAttribute('data-p'); if(LIENS[k] && LIENS[k]!=="#") b.setAttribute('href',LIENS[k]);
   });
