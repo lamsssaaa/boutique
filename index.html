@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>BOOST — Guides & prompts pour lancer ton business (Suisse & France)</title>
+<meta name="description" content="Des guides et packs de prompts IA prêts à l'emploi pour lancer et faire grandir ton business. Livraison instantanée. Suisse 🇨🇭 & France 🇫🇷." />
+<meta property="og:title" content="BOOST — Lance et fais grandir ton business" />
+<meta property="og:description" content="Guides business + packs de prompts IA, prêts à l'emploi. Livraison instantanée." />
+<meta property="og:type" content="website" />
+<meta name="theme-color" content="#0B0E16" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{--bg:#0B0E16;--bg2:#141927;--card:#151A28;--line:#27304A;--ink:#EEF1F8;--muted:#9AA4BE;--brand:#7C6CFF;--brand2:#22D3A8;--gold:#FFB020}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.55}
+  h1,h2,h3{font-family:Sora,sans-serif;line-height:1.1}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;background:linear-gradient(90deg,var(--brand),#6354ff);color:#fff;border:none;border-radius:11px;padding:13px 22px;font:700 15px Sora;cursor:pointer;transition:transform .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
+  header{position:sticky;top:0;z-index:30;background:rgba(11,14,22,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .brand{font-family:Sora;font-weight:800;font-size:21px;letter-spacing:-.01em}
+  .brand b{background:linear-gradient(90deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .eyebrow{font:700 12px Sora;letter-spacing:.18em;text-transform:uppercase;color:var(--brand2)}
+  .hero{text-align:center;padding:64px 0 34px}
+  .hero h1{font-size:clamp(32px,5vw,52px);font-weight:800;letter-spacing:-.02em}
+  .hero h1 span{background:linear-gradient(90deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p{color:var(--muted);font-size:18px;max-width:54ch;margin:18px auto 0}
+  .flags{margin-top:14px;color:var(--muted);font-size:14px}
+  .trust{display:flex;justify-content:center;gap:26px;flex-wrap:wrap;margin:26px 0 6px}
+  .trust div{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
+  .trust svg{color:var(--brand2)}
+  section{padding:30px 0}
+  .head{text-align:center;margin-bottom:26px}
+  .head h2{font-size:clamp(24px,3.4vw,34px);margin-top:6px}
+  /* bundle */
+  .bundle{background:linear-gradient(120deg,#1b1740,#10202b);border:1px solid #3a2f6b;border-radius:22px;padding:30px;display:grid;grid-template-columns:1.4fr 1fr;gap:24px;align-items:center}
+  .bundle .tagb{display:inline-block;background:var(--gold);color:#1a1206;font:700 11px Sora;padding:4px 10px;border-radius:6px;letter-spacing:.04em}
+  .bundle h3{font-size:26px;margin:10px 0 8px}
+  .bundle p{color:#c9d0e6;font-size:14.5px}
+  .bundle .pr{font-family:Sora;font-weight:800;font-size:30px;margin-top:12px}
+  .bundle .pr s{color:var(--muted);font-size:18px;font-weight:600;margin-left:8px}
+  .bundle .imgs{display:flex;gap:-20px;justify-content:center}
+  .bundle .imgs img{width:33%;border-radius:8px;border:1px solid var(--line);box-shadow:0 14px 30px -16px rgba(0,0,0,.6);margin-left:-18px}
+  .bundle .imgs img:first-child{margin-left:0}
+  /* grid */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .prod{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+  .prod .thumb{aspect-ratio:1/1.1;overflow:hidden;background:#0E1016;border-bottom:1px solid var(--line)}
+  .prod .thumb img{width:100%;height:100%;object-fit:cover;object-position:center}
+  .prod .body{padding:18px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .prod h3{font-size:18px}
+  .prod p{color:var(--muted);font-size:13.5px;flex:1}
+  .prod .row{display:flex;align-items:center;justify-content:space-between;margin-top:6px}
+  .prod .pr{font-family:Sora;font-weight:700;font-size:18px}
+  .prod .pr small{color:var(--muted);font-weight:500;font-size:12px}
+  .prod .btn{padding:10px 16px;font-size:14px}
+  /* free */
+  .free{background:var(--bg2);border:1px solid var(--line);border-radius:20px;padding:30px;text-align:center}
+  .free h3{font-size:24px}
+  .free p{color:var(--muted);margin-top:10px;max-width:50ch;margin-left:auto;margin-right:auto}
+  form{display:flex;gap:10px;max-width:430px;margin:18px auto 0;flex-wrap:wrap;justify-content:center}
+  input[type=email]{flex:1;min-width:200px;padding:13px 16px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:500 14px Inter}
+  details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:2px 18px;margin-bottom:10px}
+  summary{cursor:pointer;list-style:none;padding:15px 0;font-weight:600;display:flex;justify-content:space-between}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--brand2)}
+  details[open] summary::after{content:"–"}
+  details p{padding:0 0 16px;color:var(--muted);font-size:14px}
+  footer{border-top:1px solid var(--line);margin-top:30px;padding:28px 0;color:var(--muted);font-size:13px;text-align:center}
+  @media(max-width:820px){.grid{grid-template-columns:1fr}.bundle{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="brand">BO<b>OST</b></div>
+    <a href="#produits" class="btn ghost" style="padding:9px 16px;font-size:14px">Voir les produits</a>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="hero">
+    <span class="eyebrow">Guides & prompts · Livraison instantanée</span>
+    <h1>Lance et fais grandir <span>ton business</span>.</h1>
+    <p>Des guides concrets et des packs de prompts IA prêts à l'emploi — pour passer à l'action sans perdre de temps.</p>
+    <div class="flags">🇨🇭 Suisse &nbsp;·&nbsp; 🇫🇷 France &nbsp;·&nbsp; paiement en CHF / €</div>
+    <div class="trust">
+      <div><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l4 4 6-8"/></svg> Livraison instantanée</div>
+      <div><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="12" height="8" rx="2"/></svg> Paiement sécurisé</div>
+      <div><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 1l6 3v4c0 4-3 6-6 7-3-1-6-3-6-7V4z"/></svg> Satisfait ou remboursé</div>
+    </div>
+  </section>
+
+  <!-- BUNDLE -->
+  <section>
+    <div class="bundle">
+      <div>
+        <span class="tagb">MEILLEURE OFFRE</span>
+        <h3>Le Pack Démarrage complet</h3>
+        <p>Les 3 produits réunis : le pack de 501 prompts e-commerce + les 2 tomes « 50 business à lancer ». Tout pour démarrer et vendre.</p>
+        <div class="pr">39 CHF / 39 € <s>64</s></div>
+        <a href="#" class="btn buy" data-p="bundle" style="margin-top:16px">Obtenir le pack complet →</a>
+      </div>
+      <div class="imgs">
+        <img src="img/prompts-ecom.png" alt="">
+        <img src="img/tome1.png" alt="">
+        <img src="img/tome2.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUITS -->
+  <section id="produits">
+    <div class="head"><span class="eyebrow">À l'unité</span><h2>Les produits</h2></div>
+    <div class="grid">
+      <div class="prod">
+        <div class="thumb"><img src="img/prompts-ecom.png" alt="PROMPTS PRO E-commerce"></div>
+        <div class="body">
+          <h3>PROMPTS PRO · E-commerce</h3>
+          <p>501 prompts ChatGPT prêts à coller, classés en 12 étapes du métier e-commerce. 0 doublon.</p>
+          <div class="row"><span class="pr">24 CHF <small>/ 24 €</small></span><a href="#" class="btn buy" data-p="prompts">Acheter</a></div>
+        </div>
+      </div>
+      <div class="prod">
+        <div class="thumb"><img src="img/tome1.png" alt="Tome 1"></div>
+        <div class="body">
+          <h3>50 business · sans investir</h3>
+          <p>Tome 1 : 50 business à lancer dès demain avec 0€, chacun avec ses étapes concrètes.</p>
+          <div class="row"><span class="pr">19,90 CHF <small>/ €</small></span><a href="#" class="btn buy" data-p="tome1">Acheter</a></div>
+        </div>
+      </div>
+      <div class="prod">
+        <div class="thumb"><img src="img/tome2.png" alt="Tome 2"></div>
+        <div class="body">
+          <h3>50 business · ~300€/mois</h3>
+          <p>Tome 2 : 50 business avec un petit budget, étapes + répartition du budget pub/outils.</p>
+          <div class="row"><span class="pr">19,90 CHF <small>/ €</small></span><a href="#" class="btn buy" data-p="tome2">Acheter</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRATUIT -->
+  <section>
+    <div class="free">
+      <span class="eyebrow">Gratuit</span>
+      <h3>🎁 101 idées de business 2026-2027</h3>
+      <p>Reçois gratuitement le guide des 101 idées de business par email. Parfait pour t'inspirer avant de choisir.</p>
+      <form onsubmit="return lead(event)">
+        <input type="email" id="lead-email" required placeholder="ton@email.ch" />
+        <button class="btn" type="submit">Recevoir le guide gratuit</button>
+      </form>
+      <p id="lead-msg" style="font-size:12px;margin-top:10px"></p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="max-width:760px;margin:0 auto">
+    <div class="head"><span class="eyebrow">FAQ</span><h2>Questions fréquentes</h2></div>
+    <details open><summary>Je reçois quoi et quand ?</summary><p>Un fichier PDF, livré instantanément après le paiement par email. Accès à vie + mises à jour.</p></details>
+    <details><summary>Ça marche pour la Suisse et la France ?</summary><p>Oui. Les guides incluent une page « se lancer en Suisse / en France » (statut, TVA), et le paiement se fait en CHF ou en €.</p></details>
+    <details><summary>Et si ça ne me plaît pas ?</summary><p>Satisfait ou remboursé : écris-nous et on te rembourse, sans discuter.</p></details>
+    <details><summary>Quelle IA pour les prompts ?</summary><p>Toutes : ChatGPT, Claude, Gemini, Copilot. Les prompts sont universels, en français.</p></details>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><b>BOOST</b> · Guides & prompts pour lancer ton business · 🇨🇭🇫🇷</p>
+    <p style="margin-top:10px"><a href="legal.html" style="color:var(--muted)">Mentions légales · Confidentialité · CGV</a> · <a href="mailto:ahmed.salam@hotmail.ch" style="color:var(--muted)">Contact</a></p>
+    <p style="margin-top:8px;opacity:.7">© 2026 BOOST · Paiement & livraison via Payhip/Gumroad</p>
+  </div>
+</footer>
+
+<script>
+  // ⚠️ Remplace par tes vrais liens Payhip/Gumroad une fois les produits publiés.
+  const LIENS = { prompts:"#", tome1:"#", tome2:"#", bundle:"#" };
+  document.querySelectorAll('.buy').forEach(b=>{
+    const k=b.getAttribute('data-p'); if(LIENS[k] && LIENS[k]!=="#") b.setAttribute('href',LIENS[k]);
+  });
+  function lead(e){
+    e.preventDefault();
+    const email=document.getElementById('lead-email').value;
+    window.location.href='mailto:ahmed.salam@hotmail.ch?subject=Guide%20101%20idées%20(BOOST)&body=Envoyer%20le%20guide%20à%20:%20'+encodeURIComponent(email);
+    document.getElementById('lead-msg').textContent='Merci ! Tu vas recevoir le guide 🎁';
+    return false;
+  }
+</script>
+</body>
+</html>
